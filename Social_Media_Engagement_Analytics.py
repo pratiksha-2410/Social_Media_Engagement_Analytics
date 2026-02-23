@@ -9,3 +9,12 @@ import seaborn as sns
 
 df = pd.read_csv("social_media_engagement_advanced.csv")
 print(df.head())
+
+# Data Featuring
+
+print("\n Data Shape:",df.shape)
+print("\n Data Size:",df.size)
+print("\n Data info:",df.info())
+print("\n Data Describtion:",df.describe())
+
+
