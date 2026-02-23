@@ -17,4 +17,11 @@ print("\n Data Size:",df.size)
 print("\n Data info:",df.info())
 print("\n Data Describtion:",df.describe())
 
+# Data Cleaning
 
+print("\n Null values:",df.isna().sum())
+
+# Find Duplicate Values & Remove them
+
+print("\n Duplicate Values:",df.duplicated().sum())
+print("\n",df.drop_duplicates())
