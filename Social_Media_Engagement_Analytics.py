@@ -58,4 +58,14 @@ FROM orders)"""
 Max_Post_ID = pd.read_sql(query,conn)
 print(Max_Post_ID)
 
+# Best Content Type
+
+query = """SELECT Content_Type,AVG(Engagement_Rate)
+FROM orders
+GROUP BY Content_Type
+ORDER BY AVG(Engagement_Rate) DESC"""
+
+Content_Type = pd.read_sql(query,conn)
+print(Content_Type)
+
 
