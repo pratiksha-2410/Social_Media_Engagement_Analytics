@@ -68,4 +68,14 @@ ORDER BY AVG(Engagement_Rate) DESC"""
 Content_Type = pd.read_sql(query,conn)
 print(Content_Type)
 
+# Best Platform Analysis
+
+query = """SELECT Platform,AVG(Engagement_Rate)
+FROM orders
+GROUP BY Platform
+ORDER BY AVG(Engagement_Rate) DESC"""
+
+Best_Platform = pd.read_sql(query,conn)
+print(Best_Platform)
+
 
