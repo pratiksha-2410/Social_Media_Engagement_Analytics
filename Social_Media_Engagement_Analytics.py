@@ -34,13 +34,9 @@ print("\n Null values:",df.isna().sum())
 print("\n Duplicate Values:",df.duplicated().sum())
 print("\n",df.drop_duplicates())
 
-# Calculate Engagement Rate 
 
-df["Total_Engagemnet"] = df["Likes"] + df["Comments"] + df["Shares"]
-df["Engagement_Rate"] = (df["Total_Engagement"] / df["Reach"]) * 100
-print(df[["Post_ID","Engagement_Rate"]])
-
-
+df.rename(columns={"Engagement_Rate (%)":"Engagement_Rate"},inplace=True)
+df.to_sql("orders",conn,if_exists="replace",index=False)
 
 # Max Engagement Post_ID via Pandas
 max_index = df["Engagement_Rate"].idxmax()
@@ -53,13 +49,12 @@ print("Engagement_Rate",max_engagement_rate )
 
 # Max Engagement Post_ID via SQL
 
-df.rename(columns={"Engagement_Rate (%)":"Engagementt_Rate"},inplace=True)
-df.to_sql("orders",conn,if_exists="replace",index=False)
-
-query = """SELECT Post_ID,Engagementt_Rate 
+query = """SELECT Post_ID,Engagement_Rate 
 FROM orders
-WHERE Engagementt_Rate = (SELECT MAX(Engagementt_Rate)
+WHERE Engagement_Rate = (SELECT MAX(Engagement_Rate)
 FROM orders)""" 
 
 Max_Post_ID = pd.read_sql(query,conn)
 print(Max_Post_ID)
+
+
