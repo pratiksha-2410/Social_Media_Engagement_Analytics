@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sqlite3
 
+# Database Connection
+
 conn = sqlite3.connect("social_media.db")
 cursor = conn.cursor()
-
-
 
 # Load Dataset
 
@@ -34,6 +34,7 @@ print("\n Null values:",df.isna().sum())
 print("\n Duplicate Values:",df.duplicated().sum())
 print("\n",df.drop_duplicates())
 
+#  Rename Column
 
 df.rename(columns={"Engagement_Rate (%)":"Engagement_Rate"},inplace=True)
 df.to_sql("orders",conn,if_exists="replace",index=False)
