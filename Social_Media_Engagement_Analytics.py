@@ -89,6 +89,18 @@ LIMIT 3"""
 Top_Performing_Posts = pd.read_sql(query,conn)
 print(Top_Performing_Posts)
 
+# Select Suspisious/Bot Engagement 
 
-
+query = """
+SELECT
+    Post_ID,Engagement_Rate,
+    CASE
+        WHEN Engagement_Rate > 50
+        THEN 'Suspisious'
+        ELSE 'Normal'
+END AS Engagement_Flag
+FROM orders
+""" 
+Suspisious_Engagement = pd.read_sql(query,conn)
+print(Suspisious_Engagement)
 
