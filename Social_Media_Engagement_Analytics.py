@@ -78,4 +78,17 @@ ORDER BY AVG(Engagement_Rate) DESC"""
 Best_Platform = pd.read_sql(query,conn)
 print(Best_Platform)
 
+# Top Three Performing Posts
+
+query = """SELECT Post_ID,Platform,Content_Type,Engagement_Rate
+FROM orders
+GROUP BY Post_ID,Platform,Content_Type
+ORDER BY Engagement_Rate DESC
+LIMIT 3"""
+
+Top_Performing_Posts = pd.read_sql(query,conn)
+print(Top_Performing_Posts)
+
+
+
 
