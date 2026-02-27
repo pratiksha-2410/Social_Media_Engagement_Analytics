@@ -1,12 +1,13 @@
-📊 Social Media Engagement Analysis
-Python | NumPy | SQL | Data Visualization
-📌 Project Overview
+# Social Media Engagement Analysis
+**Python | NumPy | SQL | Data Visualization**
 
-This project analyzes social media post performance to identify patterns in engagement across platforms, content types, cities, and posting dates.
+## Project Overview
 
-The goal is to transform raw engagement data into actionable business insights that help optimize content strategy and platform investment.
+**This project analyzes social media post performance to identify patterns in engagement across platforms, content types, cities, and posting dates.**
 
-🎯 Business Objective
+**The goal is to transform raw engagement data into actionable business insights that help optimize content strategy and platform investment.**
+
+## Business Objective
 
 Measure and analyze Engagement Rate
 
@@ -18,7 +19,7 @@ Detect top-performing posts
 
 Provide data-driven marketing recommendations
 
-📂 Dataset Features
+## Dataset Features
 
 The dataset includes:
 
@@ -40,7 +41,7 @@ Shares
 
 Reach
 
-🧮 Key Metrics Calculated
+## Key Metrics Calculated
 ✅ Total Engagement
 Likes + Comments + Shares
 ✅ Engagement Rate (%)
@@ -48,38 +49,39 @@ Likes + Comments + Shares
 
 This metric helps evaluate content effectiveness independent of reach size.
 
-📊 Exploratory Data Analysis
+## Exploratory Data Analysis
 
 The following visualizations were created:
 
-📈 Engagement Rate Distribution
+ Engagement Rate Distribution
 
-📊 Average Engagement by Platform
+ Average Engagement by Platform
 
-📊 Content Type Performance Analysis
+ Content Type Performance Analysis
 
-🏆 Top 5 Posts by Engagement Rate
+ Top 5 Posts by Engagement Rate
 
-📅 Engagement Trend Over Time
+ Engagement Trend Over Time
 
-🔍 Key Insights
-1️⃣ Platform Performance
+## Key Insights
+
+### Platform Performance
 
 Instagram demonstrated the highest average engagement rate, indicating stronger audience interaction compared to other platforms.
 
-2️⃣ Content Strategy
+### Content Strategy
 
 Reels and Video content consistently generated higher engagement rates than static posts.
 
-3️⃣ High-Impact Posts
+### High-Impact Posts
 
 Top-performing posts showed significantly higher share counts, indicating viral potential.
 
-4️⃣ Reach vs Engagement
+### Reach vs Engagement
 
 Higher reach did not always result in higher engagement percentage, emphasizing content quality over volume.
 
-🧠 Advanced SQL Implementation
+## Advanced SQL Implementation
 
 This project also includes:
 
@@ -95,7 +97,7 @@ City-wise ranking
 
 Suspicious engagement detection logic
 
-🛠️ Tools & Technologies Used
+## Tools & Technologies Used
 
 Python
 
@@ -107,15 +109,7 @@ Matplotlib
 
 SQL
 
-📁 Project Structure
-social-media-engagement-analysis/
-│
-├── social_media_data.csv
-├── social_media_analysis.py
-├── social_media_analysis.sql
-├── README.md
-└── visualizations/
-💼 What This Project Demonstrates
+## What This Project Demonstrates :
 
 Data Cleaning & Transformation
 
@@ -131,7 +125,7 @@ Data Visualization
 
 Insight Communication
 
-🚀 Business Recommendations
+## Business Recommendations
 
 Increase investment in high-performing platforms.
 
@@ -141,9 +135,14 @@ Replicate structure of top-performing posts.
 
 Focus on engagement rate rather than just reach.
 
-🏁 Final Conclusion
+## Final Conclusion
 
 This project demonstrates the ability to transform raw social media data into meaningful insights that support strategic marketing decisions.
 
 It reflects strong analytical skills, structured SQL knowledge, and the ability to connect data with business impact.
 
+👩‍💻 Author
+<br>
+  Pratiksha Bagwale Zagade
+  <br>
+  Aspiring Data Scientist | Python | Data Analysis | Business Insights
