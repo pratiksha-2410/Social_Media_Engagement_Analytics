@@ -104,3 +104,90 @@ FROM orders
 Suspisious_Engagement = pd.read_sql(query,conn)
 print(Suspisious_Engagement)
 
+# Visualization
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+#  Engagement Rate Distrubution
+df['Total_Engagement'] = df['Likes'] + df['Comments'] + df['Shares']
+
+plt.figure()
+plt.hist(df['Engagement_Rate'], bins=6)
+plt.title("Engagement Rate Distribution")
+plt.xlabel("Engagement Rate (%)")
+plt.ylabel("Number of Posts")
+plt.show()
+
+# Avg Engagement by Platform
+
+platform_avg = df.groupby('Platform')['Engagement_Rate'].mean()
+
+plt.figure()
+plt.bar(platform_avg.index, platform_avg.values)
+plt.title("Average Engagement Rate by Platform")
+plt.xlabel("Platform")
+plt.ylabel("Avg Engagement Rate (%)")
+plt.show()
+
+# Best Content Type Performance
+
+content_avg = df.groupby('Content_Type')['Engagement_Rate'].mean()
+
+plt.figure()
+plt.bar(content_avg.index, content_avg.values)
+plt.title("Average Engagement by Content Type")
+plt.xlabel("Content Type")
+plt.ylabel("Engagement Rate (%)")
+plt.show()
+
+# Business Insights
+
+print(""" Business Insights:
+
+1️ Platform Performance Insight:
+
+Instagram shows the highest average engagement rate compared to Facebook and Twitter.
+
+This suggests the audience is more interactive on visual-first platforms.
+
+ Recommendation: Increase content investment on Instagram.
+
+2️. Content Strategy Insight:
+
+Reel and Video content types generate higher engagement than static Image or Text posts.
+
+Short-form video drives stronger audience interaction.
+ Recommendation: Focus more on Reels and Video-based content.
+
+3️. Top Performing Posts Insight:
+
+Top 5 posts contribute disproportionately to overall engagement.
+
+High-performing posts often have:
+
+Higher shares
+
+Engaging captions
+
+Better reach-to-engagement conversion
+
+ Recommendation: Analyze what made top posts successful and replicate strategy.
+
+4️. Engagement Distribution Insight:
+
+Majority of posts fall within moderate engagement range.
+
+A few posts act as outliers (very high engagement).
+
+ Recommendation: Identify patterns in high-performing posts (timing, hashtags, format).
+
+5️.Reach vs Engagement Insight:
+
+Higher reach does not always guarantee higher engagement rate.
+
+Some lower-reach posts performed better in terms of engagement percentage.
+
+ Recommendation: Focus on quality content, not just reach.""")
+
